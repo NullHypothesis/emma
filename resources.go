@@ -42,7 +42,7 @@ var dirAuths = []string{
 
 var domains = map[string]map[string]bool{
 	"www.torproject.org": map[string]bool{"95.216.163.36": true,
-		"138.201.14.197": true, "2a01:4f8:172:1b46:0:abba:5:1": true, "2a01:4f9:c010:19eb::1": true},
+		"116.202.120.165": true, "2a01:4f8:fff0:4f:266:37ff:fe2c:5d19": true, "2a01:4f9:c010:19eb::1": true},
 
 	"bridges.torproject.org": map[string]bool{"78.47.38.229": true, "2a01:4f8:211:6e8:0:823:5:1": true},
 }
