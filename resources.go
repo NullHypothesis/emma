@@ -11,12 +11,14 @@ var defaultBridges = []string{
 	"37.218.245.14:38224",
 	"85.31.186.98:443",
 	"85.31.186.26:443",
-	"216.252.162.21:46089",
 	"144.217.20.138:80",
 	"193.11.166.194:27015",
 	"193.11.166.194:27020",
 	"193.11.166.194:27025",
 	"209.148.46.65:443",
+	"146.57.248.225:22",
+	"45.145.95.6:27015",
+	"[2a0c:4d80:42:702::1]:27015",
 }
 
 // Directory authorities.  See
@@ -41,8 +43,15 @@ var dirAuths = []string{
 }
 
 var domains = map[string]map[string]bool{
-	"www.torproject.org": map[string]bool{"95.216.163.36": true,
-		"116.202.120.165": true, "2a01:4f8:fff0:4f:266:37ff:fe2c:5d19": true, "2a01:4f9:c010:19eb::1": true},
+	"www.torproject.org": map[string]bool{
+		"116.202.120.166":                     true,
+		"116.202.120.165":                     true,
+		"95.216.163.36":                       true,
+		"2a01:4f8:fff0:4f:266:37ff:fe2c:5d19": true,
+		"2a01:4f8:fff0:4f:266:37ff:feae:3bbc": true,
+		"2a01:4f9:c010:19eb::1":               true},
 
-	"bridges.torproject.org": map[string]bool{"78.47.38.229": true, "2a01:4f8:211:6e8:0:823:5:1": true},
+	"bridges.torproject.org": map[string]bool{
+		"116.202.120.184":                     true,
+		"2a01:4f8:fff0:4f:266:37ff:fef9:f825": true},
 }
