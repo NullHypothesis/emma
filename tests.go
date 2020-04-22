@@ -2,7 +2,10 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"net"
+	"net/http"
+	"strings"
 	"time"
 )
 
@@ -35,4 +38,20 @@ func DoesDomainResolve(domain string, expected map[string]bool) error {
 		}
 	}
 	return nil
+}
+
+func DoesWebsiteContainStr(domain, substring string) (bool, error) {
+
+	resp, err := http.Get(domain)
+	if err != nil {
+		return false, err
+	}
+	defer resp.Body.Close()
+
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return false, err
+	}
+
+	return strings.Contains(string(body), substring), nil
 }

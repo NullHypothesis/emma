@@ -4,6 +4,10 @@ import (
 	"fmt"
 )
 
+const (
+	SuccessMessage = "everything as expected"
+)
+
 func testDefaultBridges() {
 	fmt.Println("Testing TCP port of default bridges.")
 	for _, addrTuple := range defaultBridges {
@@ -39,18 +43,33 @@ func testDomains() {
 		}
 	}
 	if allGood {
-		fmt.Println("\tEverything as expected.")
+		fmt.Printf("\t%s\n", SuccessMessage)
 	}
 }
 
-func runTests() {
-
-	testDefaultBridges()
-	testDirAuths()
-	testDomains()
+func testWebsites() {
+	fmt.Println("Testing websites.")
+	var allGood = true
+	for url, substring := range websites {
+		success, err := DoesWebsiteContainStr(url, substring)
+		if err != nil {
+			fmt.Println(err)
+			allGood = false
+		}
+		if !success {
+			fmt.Printf("\tno substring %q in url %q.\n", substring, url)
+			allGood = false
+		}
+	}
+	if allGood {
+		fmt.Printf("\t%s\n", SuccessMessage)
+	}
 }
 
 func main() {
 
-	runTests()
+	testDefaultBridges()
+	testDirAuths()
+	testDomains()
+	testWebsites()
 }

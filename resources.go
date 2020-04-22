@@ -55,3 +55,10 @@ var domains = map[string]map[string]bool{
 		"116.202.120.184":                     true,
 		"2a01:4f8:fff0:4f:266:37ff:fef9:f825": true},
 }
+
+var websites = map[string]string{
+	"https://bridges.torproject.org": "The Tor Project",
+	"https://torproject.org":         "Tor Browser",
+	"https://gettor.torproject.org":  "GetTor",
+	"https://ajax.aspnetcdn.com":     "Microsoft Ajax Content Delivery Network",
+}
