@@ -41,6 +41,15 @@ func testDirAuths() {
 	}
 }
 
+func testRelays() {
+	l.Println("Testing relays.")
+
+	for _, addrTuple := range relays {
+		r := IsTCPPortReachable(addrTuple)
+		l.Print(r.String())
+	}
+}
+
 func main() {
 
 	log.Println("Starting analysis.")
@@ -63,6 +72,7 @@ func main() {
 	testDefaultBridges()
 	testWebsites()
 	testDirAuths()
+	testRelays()
 
 	if _, err := f.WriteString(buf.String()); err != nil {
 		os.Remove(f.Name())
