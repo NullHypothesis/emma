@@ -33,7 +33,7 @@ func testWebsites() {
 }
 
 func testDirAuths() {
-	l.Println("Testing directory authorities.")
+	l.Println("Testing directory authorities:")
 
 	for _, addrTuple := range dirAuths {
 		r := IsTCPPortReachable(addrTuple)
@@ -42,7 +42,7 @@ func testDirAuths() {
 }
 
 func testRelays() {
-	l.Println("Testing relays.")
+	l.Println("Testing relays:")
 
 	for _, addrTuple := range relays {
 		r := IsTCPPortReachable(addrTuple)
