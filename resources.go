@@ -56,6 +56,7 @@ var domains = map[string]map[string]bool{
 		"2a01:4f8:fff0:4f:266:37ff:fef9:f825": true},
 }
 
+// Websites and a string that's meant to be in the website's body.
 var websites = map[string]string{
 	"https://bridges.torproject.org": "The Tor Project",
 	"https://torproject.org":         "Tor Browser",
