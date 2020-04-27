@@ -69,8 +69,12 @@ var domains = map[string]map[string]bool{
 
 // Websites and a string that's meant to be in the website's body.
 var websites = map[string]string{
-	"https://bridges.torproject.org": "The Tor Project",
-	"https://torproject.org":         "Tor Browser",
-	"https://gettor.torproject.org":  "GetTor",
-	"https://ajax.aspnetcdn.com":     "Microsoft Ajax Content Delivery Network",
+	"https://bridges.torproject.org":                                           "The Tor Project",
+	"https://torproject.org":                                                   "Tor Browser",
+	"https://gettor.torproject.org":                                            "GetTor",
+	"https://ajax.aspnetcdn.com":                                               "Microsoft Ajax Content Delivery Network",
+	"https://archive.org/details/@gettor":                                      "torbrowser-install",
+	"https://drive.google.com/drive/folders/13CADQTsCwrGsIID09YQbNz2DfRMUoxUU": "tor-browser-linux",
+	"https://github.com/torproject/torbrowser-releases/":                       "GetTor",
+	"https://gitlab.com/thetorproject/torbrowser-windows":                      "torbrowser",
 }

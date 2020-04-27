@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"net"
 	"net/http"
+	"net/url"
 	"strings"
 	"time"
 )
@@ -66,14 +67,20 @@ func DoesDomainResolve(domain string, expected map[string]bool) error {
 	return nil
 }
 
-func DoesWebsiteContainStr(domain, substring string) (r Result) {
+func DoesWebsiteContainStr(rawurl, substring string) (r Result) {
 
 	defer func(s time.Time) {
 		r.ExecutionTime = time.Since(s)
 	}(time.Now())
-	r.Target = domain
 
-	resp, err := http.Get(domain)
+	u, err := url.Parse(rawurl)
+	if err == nil {
+		r.Target = u.Host
+	} else {
+		r.Target = rawurl
+	}
+
+	resp, err := http.Get(rawurl)
 	if err != nil {
 		r.Error = err
 		return
