@@ -53,20 +53,6 @@ var relays = []string{
 	"185.220.100.253:9000", // F3Netze (Exit)
 }
 
-var domains = map[string]map[string]bool{
-	"www.torproject.org": map[string]bool{
-		"116.202.120.166":                     true,
-		"116.202.120.165":                     true,
-		"95.216.163.36":                       true,
-		"2a01:4f8:fff0:4f:266:37ff:fe2c:5d19": true,
-		"2a01:4f8:fff0:4f:266:37ff:feae:3bbc": true,
-		"2a01:4f9:c010:19eb::1":               true},
-
-	"bridges.torproject.org": map[string]bool{
-		"116.202.120.184":                     true,
-		"2a01:4f8:fff0:4f:266:37ff:fef9:f825": true},
-}
-
 // Websites and a string that's meant to be in the website's body.
 var websites = map[string]string{
 	"https://bridges.torproject.org":                                           "The Tor Project",
