@@ -64,4 +64,5 @@ var websites = map[string]string{
 	"https://github.com/torproject/torbrowser-releases/":                       "GetTor",
 	"https://gitlab.com/thetorproject/torbrowser-windows":                      "torbrowser",
 	"https://accounts.google.com/ServiceLogin":                                 "Sign in",
+	"https://mail.riseup.net/rc/":                                              "Welcome to mail.riseup.net",
 }
