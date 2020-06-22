@@ -1,9 +1,15 @@
 output_dir = bin
 
-all: windows linux
+build: *.go
+	go build -o $(output_dir)/emma
+
+osx: *.go
+	# The command 'go tool dist list' shows you a list of all supported
+	# platforms and architectures.
+	GOOS=darwin go build -o $(output_dir)/emma.app
 
 windows: *.go
-	GOOS=windows GOARCH=386 go build -o $(output_dir)/emma.exe
+	GOOS=windows go build -o $(output_dir)/emma.exe
 
 linux: *.go
-	go build -o $(output_dir)/emma
+	GOOS=linux go build -o $(output_dir)/emma

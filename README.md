@@ -18,6 +18,19 @@ stdout.
 Emma is meant to be run by semi-technical Tor users who believe that they are
 subject to censorship.
 
+## Build
+
+You need to have [golang](https://golang.org) installed to compile emma.
+First, clone the repository by running
+
+    git clone https://gitlab.torproject.org/tpo/anti-censorship/emma.git
+
+Then, enter your newly-cloned repository and compile the tool by running
+
+    cd emma && make
+
+If everything worked, your emma binary will be in the `bin` directory.
+
 ## Example output
 
 Here's what emma's output looks like:
