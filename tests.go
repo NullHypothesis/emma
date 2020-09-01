@@ -13,7 +13,7 @@ import (
 
 // timeout specifies the number of seconds we're willing to wait until we
 // decide that the given destination is offline.
-const timeout time.Duration = 3 * time.Second
+const timeout time.Duration = 5 * time.Second
 
 type Result struct {
 	Target        string
