@@ -46,7 +46,7 @@ var dirAuths = []string{
 var relays = []string{
 	"193.11.166.196:443",   // Karlstad1 (Guard)
 	"81.7.18.7:9001",       // Freebird32 (Guard)
-	"91.143.80.147:995",    // Ichotolot63 (Guard)
+	"31.31.73.222:9002",    // mrshuTor01 (Guard)
 	"162.247.74.7:443",     // CalyxInstitute01 (Exit)
 	"62.102.148.68:443",    // weizenbaum (Exit)
 	"185.220.100.253:9000", // F3Netze (Exit)
