@@ -1,7 +1,7 @@
 package main
 
 // Default bridges.  See
-// <https://trac.torproject.org/projects/tor/wiki/doc/TorBrowser/DefaultBridges>
+// <https://gitlab.torproject.org/tpo/anti-censorship/team/-/wikis/Default-Bridges>
 // for the full list.
 var defaultBridges = []string{
 	"38.229.1.78:80",
