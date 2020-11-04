@@ -18,6 +18,7 @@ var defaultBridges = []string{
 	"146.57.248.225:22",
 	"45.145.95.6:27015",
 	"[2a0c:4d80:42:702::1]:27015",
+	"51.222.13.177:80",
 }
 
 // Directory authorities.  See
